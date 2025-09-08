@@ -1,0 +1,7 @@
+# from repo root
+ls -la public || echo "no public dir"
+# if file exists:
+ls -la public/index.html
+# check git status and whether file is tracked
+git status --porcelain public/index.html
+git ls-files --error-unmatch public/index.html && echo "tracked" || echo "not tracked"
