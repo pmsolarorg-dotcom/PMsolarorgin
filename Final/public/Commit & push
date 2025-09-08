@@ -1,0 +1,3 @@
+git add public/index.html netlify.toml
+git commit -m "Netlify: CRA build -> publish build/"
+git push
