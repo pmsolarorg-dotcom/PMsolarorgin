@@ -1,0 +1,15 @@
+# show src contents
+ls -la src || echo "no src folder"
+
+# check whether index.js exists and is tracked
+ls -la src/index.js
+git ls-files --error-unmatch src/index.js && echo "tracked" || echo "not tracked or missing"
+
+# also check for typescript entry
+ls -la src/index.tsx src/index.jsx || true
+
+# check case-sensitivity problems
+git ls-files | grep -i '^src/index' || true
+
+# show package.json scripts
+cat package.json | sed -n '1,120p'
